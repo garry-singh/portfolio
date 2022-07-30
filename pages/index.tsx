@@ -1,11 +1,11 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <h1 className='text-3xl font-bold underline'>
-      Hello
-    </h1>
-  )
-}
+    <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+      <h1>Hello</h1>
+    </div>
+  );
+};
 
-export default Home
+export default Home;
