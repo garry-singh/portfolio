@@ -13,7 +13,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="flex container w-full mx-auto justify-between items-center font-bold text-2xl px-4 py-0 md:py-4">
+    <div className="flex container mx-auto justify-between items-center font-bold text-2xl px-4 md:px-0 py-0 md:py-4 max-w-5xl">
       <Link href="/">
         <a>
           <h1 className="h-[3.5rem] flex items-center text-center">GS</h1>

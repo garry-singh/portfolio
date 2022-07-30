@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+    <div className="flex flex-col justify-center items-start max-w-5xl mx-auto mb-16">
       <h1>HOME</h1>
     </div>
   );
