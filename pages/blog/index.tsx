@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { GetStaticProps } from "next";
+import Post from "../../components/Post";
 
 type Props = {
   posts: {
@@ -16,7 +17,7 @@ const Blog = ({ posts }: Props) => {
   return (
     <div>
       {posts.map((post) => (
-        <p key={post.frontmatter.title}>{post.frontmatter.title}</p>
+        <Post post={post} />
       ))}
     </div>
   );
