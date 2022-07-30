@@ -15,7 +15,7 @@ type Props = {
 
 const Blog = ({ posts }: Props) => {
   return (
-    <div>
+    <div className="flex flex-col justify-center items-start max-w-5xl mx-auto mb-16">
       {posts.map((post) => (
         <Post post={post} />
       ))}
@@ -25,7 +25,7 @@ const Blog = ({ posts }: Props) => {
 
 export default Blog;
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   // Get files from posts directory
   const files = fs.readdirSync(path.join("posts"));
 
