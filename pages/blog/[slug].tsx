@@ -11,7 +11,7 @@ type Props = {
 
 const Post = ({ content }: Props) => {
   return (
-    <div className="flex flex-col justify-center items-center max-w-xs md:max-w-5xl mx-auto mb-16">
+    <div className="flex flex-col justify-center items-center max-w-xs md:max-w-4xl mx-auto mb-16">
       <div
         className="prose dark:prose-invert"
         dangerouslySetInnerHTML={{

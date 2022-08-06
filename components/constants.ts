@@ -16,3 +16,18 @@ export const navLinks = [
       href: "/contact",
     },
   ];
+
+  export const footerLinks = [
+    {
+      name: "GitHub",
+      href: "/",
+    },
+    {
+      name: "LinkedIn",
+      href: "/",
+    },
+    {
+      name: "Twitter",
+      href: "/",
+    },
+  ];
