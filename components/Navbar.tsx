@@ -12,13 +12,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex container mx-auto justify-between items-center font-bold text-2xl px-4 md:px-0 py-0 md:py-4 max-w-4xl">
+    <nav className="flex container mx-auto justify-between items-center font-bold text-2xl px-4 md:px-0 py-0 md:py-4 max-w-4xl">
       <Link href="/">
         <a>
           <h1 className="h-[3.5rem] flex items-center text-center">GS</h1>
         </a>
       </Link>
-      <nav className="hidden md:flex space-x-10 items-center">
+      <div className="hidden md:flex space-x-10 items-center">
         {navLinks.map((link) => {
           return (
             <Link key={link.name} href={link.href}>
@@ -27,7 +27,7 @@ const Navbar = () => {
           );
         })}
         <ThemeSwitch />
-      </nav>
+      </div>
       {!isSidebarOpen ? (
         <div className="flex md:hidden">
           <ThemeSwitch />
@@ -59,7 +59,7 @@ const Navbar = () => {
           </div>
         </>
       )}
-    </div>
+    </nav>
   );
 };
 
