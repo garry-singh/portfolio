@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { navLinks } from "./constants";
+import { navLinks, navMobileLinks } from "./constants";
 import ThemeSwitch from "./ThemeSwitch";
 
 const Navbar = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
           </button>
           <div className="top-0 right-0 w-full bg-white dark:bg-black p-10 pl-20 text-white fixed h-full z-20">
             <ul className="flex flex-col mt-8 space-y-8 text-4xl text-black dark:text-white">
-              {navLinks.map((link) => {
+              {navMobileLinks.map((link) => {
                 return (
                   <Link key={link.name} href={link.href}>
                     <a onClick={handleSidebarClick}>{link.name}</a>
