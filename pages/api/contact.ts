@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from "next";
 
 const verifyRecaptcha = async ( token: string ) => {
-  const secretKey = process.env.RECAPTHA_SECRET_KEY;
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
 
   var verificationUrl =
     "https://www.google.com/recaptcha/api/siteverify?secret=" +
@@ -13,7 +13,7 @@ const verifyRecaptcha = async ( token: string ) => {
   return await axios.post(verificationUrl);
 };
 
-export const handler = async (
+const handler = async (
   req: NextApiRequest,
   res: NextApiResponse
 ) => {
@@ -22,6 +22,7 @@ export const handler = async (
 
     // Recaptcha response
     const response = await verifyRecaptcha(token);
+    console.log(response);
 
     if (response.data.success && response.data.score >= 0.5) {
       return res
@@ -41,3 +42,5 @@ export const handler = async (
     });
   }
 }
+
+export default handler;

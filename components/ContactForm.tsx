@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useCallback } from "react";
 import axios from "axios";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
@@ -36,6 +36,7 @@ const ContactForm = () => {
 
     try {
       const token = await executeRecaptcha();
+      console.log(token, typeof token);
       if (!token) {
         setResponse({ message: "Failed to Send!!!", status: "Failed" });
         return;
