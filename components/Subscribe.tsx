@@ -14,10 +14,10 @@ const Subscribe = () => {
           type="email"
           autoComplete="email"
           required
-          className="px-4 py-2 mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full border-gray-300 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white pr-32"
+          className="px-4 py-2 mt-1 md:h-14 focus:ring-blue-500 focus:border-blue-500 block w-full border-gray-300 rounded-md bg-white dark:bg-gray-800 text-black dark:text-white pr-32"
         />
         <button
-          className="flex items-center justify-center absolute right-1 top-1 px-4 font-medium h-8 bg-gray-100 dark:bg-gray-700 text-black dark:text-white rounded w-28"
+          className="flex items-center justify-center absolute right-1 top-1 px-4 font-medium h-8 md:h-12 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded w-28"
           type="submit"
         >
           Subscribe

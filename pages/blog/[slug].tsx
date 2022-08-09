@@ -11,9 +11,9 @@ type Props = {
 
 const Post = ({ content }: Props) => {
   return (
-    <div className="flex justify-center items-center max-w-xs md:max-w-4xl mx-auto pb-8">
+    <div className="flex justify-center items-center max-w-2xl lg:max-w-4xl mx-auto pb-8">
       <div
-        className="prose dark:prose-invert prose-pre:max-w-xs md:prose-pre:max-w-4xl"
+        className="prose dark:prose-invert max-w-2xl lg:max-w-4xl prose-pre:max-w-xs md:prose-pre:max-w-4xl"
         dangerouslySetInnerHTML={{
           __html: DOMPurify.sanitize(marked(content)),
         }}
