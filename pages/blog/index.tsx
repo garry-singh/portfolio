@@ -15,10 +15,12 @@ type Props = {
 
 const Blog = ({ posts }: Props) => {
   return (
-    <div className="flex flex-col justify-center items-start max-w-2xl lg:max-w-4xl mx-auto mb-16">
-      {posts.map((post) => (
-        <Post key={post.frontmatter.title} post={post} />
-      ))}
+    <div className="flex container flex-col justify-center items-start max-w-2xl lg:max-w-4xl mx-auto py-0 md:py-8">
+      <div className="px-4 md:px-0 py-6 md:py-0 md:mt-12 w-full">
+        {posts.map((post) => (
+          <Post key={post.frontmatter.title} post={post} />
+        ))}
+      </div>
     </div>
   );
 };
