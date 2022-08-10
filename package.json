@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@tailwindcss/typography": "^0.5.4",
     "@types/dompurify": "^2.3.3",
     "@types/marked": "^4.0.3",

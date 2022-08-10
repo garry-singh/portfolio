@@ -1,6 +1,7 @@
-import { useState, ChangeEvent, FormEvent, useCallback } from "react";
+import { useState, ChangeEvent, FormEvent, useRef, LegacyRef } from "react";
 import axios from "axios";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -29,16 +30,17 @@ const ContactForm = () => {
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
-    console.log(executeRecaptcha);
+
     if (!executeRecaptcha) {
       return;
     }
 
     try {
       const token = await executeRecaptcha();
-      console.log(token, typeof token);
+
       if (!token) {
         setResponse({ message: "Failed to Send!!!", status: "Failed" });
+        resetForm();
         return;
       }
 
@@ -46,21 +48,31 @@ const ContactForm = () => {
         token,
       });
 
-      console.log(result);
-
       if (result.data) {
         setResponse({
           message: result.data.message,
           status: result.data.status,
         });
       }
-    } catch (error) {
-      console.log(error);
-      setResponse({ message: "Failed to Send!!!", status: "Failed" });
-    }
 
-    console.log(name, email, message);
-    resetForm();
+      if (
+        result.data.status === "Success" &&
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID &&
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID
+      ) {
+        emailjs.send(
+          process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+          { name, email, message },
+          process.env.NEXT_PUBLIC_EMAIL_USER_ID
+        );
+
+        resetForm();
+      }
+    } catch (error) {
+      setResponse({ message: "Failed to Send!!!", status: "Failed" });
+      resetForm();
+    }
   };
 
   return (
@@ -120,12 +132,19 @@ const ContactForm = () => {
             value={message}
           />
         </div>
-        <button
-          type="submit"
-          className="flex items-center justify-center right-1 top-1 px-4 font-medium h-12 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded w-full md:w-48"
-        >
-          Submit
-        </button>
+        <div className="flex flex-col md:flex-row">
+          <button
+            type="submit"
+            className="flex items-center justify-center right-1 top-1 px-4 font-medium h-12 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded w-full md:w-48"
+          >
+            Submit
+          </button>
+          {response && (
+            <h1 className="flex items-center justify-center pt-8 md:pt-0 px-0 md:px-8 text-black dark:text-white">
+              {response.message}
+            </h1>
+          )}
+        </div>
       </form>
     </div>
   );
