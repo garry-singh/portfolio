@@ -24,7 +24,7 @@ const BlogPostCard = ({ post }: Props) => {
             <h4 className="w-full mb-2 text-lg font-medium text-gray-900 md:text-xl dark:text-gray-100">
               {title}
             </h4>
-            <p className="w-32 mb-4 text-left text-gray-500 md:text-right md:mb-0">
+            <p className="w-48 mb-4 text-left text-gray-500 md:text-right md:mb-0">
               {date}
             </p>
           </div>

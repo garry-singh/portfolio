@@ -35,14 +35,14 @@ export const navLinks = [
   export const footerLinks = [
     {
       name: "GitHub",
-      href: "/",
+      href: "https://github.com/garry-singh",
     },
     {
       name: "LinkedIn",
-      href: "/",
+      href: "https://www.linkedin.com/in/garry-singh",
     },
     {
       name: "Twitter",
-      href: "/",
+      href: "https://twitter.com/garry__singh",
     },
   ];

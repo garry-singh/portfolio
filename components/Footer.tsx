@@ -8,13 +8,8 @@ const Footer = () => {
       <div className="space-x-10">
         {footerLinks.map((link) => {
           return (
-            <Link
-              key={link.name}
-              href={link.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {link.name}
+            <Link key={link.name} href={link.href} rel="noopener noreferrer">
+              <a target="_blank">{link.name}</a>
             </Link>
           );
         })}
