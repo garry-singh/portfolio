@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent, useRef, LegacyRef } from "react";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import axios from "axios";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import emailjs from "@emailjs/browser";
@@ -7,7 +7,9 @@ const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [buttonDisabled, setButtonDisabled] = useState(false);
   const [response, setResponse] = useState({ message: "", status: "" });
+  const [displayResponse, setDisplayResponse] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
 
   const onNameChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -26,10 +28,13 @@ const ContactForm = () => {
     setName("");
     setEmail("");
     setMessage("");
+    setButtonDisabled(false);
+    setTimeout(() => setDisplayResponse(false), 3000);
   };
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    setButtonDisabled(true);
 
     if (!executeRecaptcha) {
       return;
@@ -53,6 +58,10 @@ const ContactForm = () => {
           message: result.data.message,
           status: result.data.status,
         });
+      }
+
+      if (result.data.message) {
+        setDisplayResponse(true);
       }
 
       if (
@@ -135,11 +144,12 @@ const ContactForm = () => {
         <div className="flex flex-col md:flex-row">
           <button
             type="submit"
+            disabled={buttonDisabled}
             className="flex items-center justify-center right-1 top-1 px-4 font-medium h-12 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded w-full md:w-48"
           >
             Submit
           </button>
-          {response && (
+          {response && displayResponse && (
             <h1 className="flex items-center justify-center pt-8 md:pt-0 px-0 md:px-8 text-black dark:text-white">
               {response.message}
             </h1>
