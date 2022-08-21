@@ -22,11 +22,11 @@ const ThemeSwitch = () => {
   return (
     <>
       {theme === "light" ? (
-        <button onClick={() => setDarkTheme()}>
+        <button aria-label="Dark Mode Toggle" onClick={() => setDarkTheme()}>
           <MdLightMode size="24" />
         </button>
       ) : (
-        <button onClick={() => setLightTheme()}>
+        <button aria-label="Dark Mode Toggle" onClick={() => setLightTheme()}>
           <MdDarkMode size="24" />
         </button>
       )}
