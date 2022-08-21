@@ -8,8 +8,8 @@ const Subscribe = () => {
         Subscribe to the newsletter
       </p>
       <p className="my-1 text-black dark:text-white">
-        Get emails from me about books I'm reading, ideas I'm learning and other
-        insights from across the web.
+        Get emails from me about books I&apos;m reading, ideas I&apos;m learning
+        and other insights from across the web.
       </p>
       <form
         className="relative my-4"
