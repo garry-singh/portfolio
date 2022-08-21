@@ -31,6 +31,7 @@ const Home: NextPage = () => {
               <Image
                 src="/images/aws-certified-cloud-practitioner.png"
                 alt="AWS Certification Badge"
+                quality={100}
                 height={200}
                 width={200}
               />

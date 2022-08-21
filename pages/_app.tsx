@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import Navbar from "../components/Navbar";
 import { ThemeProvider } from "next-themes";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
@@ -19,6 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     >
       <ThemeProvider attribute="class" enableSystem={false}>
         <div className="flex flex-col min-h-screen">
+          <Head>
+            <title>Garry Singh - Developer</title>
+          </Head>
           <Navbar />
           <Component {...pageProps} />
           <Footer />

@@ -32,6 +32,7 @@ const Navbar = () => {
         <div className="flex md:hidden">
           <ThemeSwitch />
           <button
+            aria-label="Dark Mode Toggle"
             className=" fill-black dark:fill-white pl-6"
             onClick={handleSidebarClick}
           >
@@ -41,6 +42,7 @@ const Navbar = () => {
       ) : (
         <>
           <button
+            aria-label="Mobile Navigation Menu"
             className="md:hidden z-30 fill-black dark:fill-white"
             onClick={handleSidebarClick}
           >
