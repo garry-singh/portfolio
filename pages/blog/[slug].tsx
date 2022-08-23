@@ -13,7 +13,7 @@ const Post = ({ content }: Props) => {
   return (
     <div className="w-full max-w-sm md:max-w-2xl lg:max-w-4xl mx-auto py-6 px-4 md:px-0 md:mt-12">
       <div
-        className="prose dark:prose-invert max-w-md md:max-w-2xl lg:max-w-4xl prose-pre:w-full prose-pre:max-w-sm sm:prose-pre:max-w-fit md:prose-pre:max-w-4xl"
+        className="prose dark:prose-invert md:text-lg max-w-md md:max-w-2xl lg:max-w-4xl prose-pre:w-full prose-pre:max-w-sm sm:prose-pre:max-w-fit md:prose-pre:max-w-4xl"
         dangerouslySetInnerHTML={{
           __html: DOMPurify.sanitize(marked(content)),
         }}

@@ -8,7 +8,7 @@ const Contact = () => {
           Get in touch!
         </h1>
         <main className="mt-6 pb-6 text-black dark:text-white">
-          <p className="mb-4">
+          <p className="mb-4 md:text-lg">
             My inbox is always open. Whether you have a question or just want to
             say hi, I&apos;ll try my best to get back to you!
           </p>

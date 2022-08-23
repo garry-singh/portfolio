@@ -7,7 +7,7 @@ const NotFound = () => {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           Oh hey! Didn&apos;t expect to see you here...
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 my-8">
+        <p className="text-gray-600 dark:text-gray-400 my-8 md:text-lg">
           Are you trying to access some top secret content? Chances are
           you&apos;ve misspelled something or found something that no longer
           exists. If you&apos;re just lost then press this handy button I left
