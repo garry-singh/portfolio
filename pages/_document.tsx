@@ -7,7 +7,7 @@ export default function Document() {
         <meta name="robots" content="follow, index" />
         <meta
           name="description"
-          content="Front-end developer and TypeScript enthusiast"
+          content="Software engineer and aspiring writer"
         />
         <link rel="canonical" href="https://garrysingh.dev/" />
       </Head>

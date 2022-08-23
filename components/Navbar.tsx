@@ -33,7 +33,7 @@ const Navbar = () => {
           <ThemeSwitch />
           <button
             aria-label="Mobile Navigation Menu"
-            className=" fill-black dark:fill-white pl-6"
+            className=" fill-black dark:fill-white ml-6"
             onClick={handleSidebarClick}
           >
             <AiOutlineMenu size="24" />
