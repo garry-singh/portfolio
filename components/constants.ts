@@ -49,8 +49,4 @@ export const navLinks = [
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/garry-singh",
     },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/garry__singh",
-    },
   ];

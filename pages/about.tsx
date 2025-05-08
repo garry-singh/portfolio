@@ -11,7 +11,7 @@ const About = () => {
         <main className="mt-8 pb-6 text-black dark:text-white">
           <p className="mt-8 mb-4 md:text-lg">
             I&apos;m a self taught developer who lived a past life in data
-            analytics.
+            analytics (something I still love).
           </p>
           <p className="mb-4 md:text-lg">
             In my day to day role as a front end developer, I primarily work
