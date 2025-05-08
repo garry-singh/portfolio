@@ -13,10 +13,11 @@ const NotFound = () => {
           exists. If you&apos;re just lost then press this handy button I left
           for you.
         </p>
-        <Link href="/">
-          <a className="flex items-center justify-center px-4 font-medium h-12 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded w-full md:w-48">
-            Return Home
-          </a>
+        <Link
+          href="/"
+          className="flex items-center justify-center px-4 font-medium h-12 bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded w-full md:w-48"
+        >
+          Return Home
         </Link>
       </div>
     </div>

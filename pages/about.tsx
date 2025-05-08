@@ -24,16 +24,18 @@ const About = () => {
             Check out the AWS Certified Cloud Practioner credential I earned on
             Feb 6th, 2022.
           </p>
-          <Link href="https://www.credly.com/badges/e24c60ef-67f7-4435-a464-72181680d17f">
-            <a target="_blank" className="flex justify-center">
-              <Image
-                src="/images/aws-certified-cloud-practitioner.png"
-                alt="AWS Certification Badge"
-                quality={100}
-                height={200}
-                width={200}
-              />
-            </a>
+          <Link
+            href="https://www.credly.com/badges/e24c60ef-67f7-4435-a464-72181680d17f"
+            target="_blank"
+            className="flex justify-center"
+          >
+            <Image
+              src="/images/aws-certified-cloud-practitioner.png"
+              alt="AWS Certification Badge"
+              quality={100}
+              height={200}
+              width={200}
+            />
           </Link>
         </main>
       </div>
