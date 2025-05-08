@@ -6,7 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 const currentProject = {
   title: "Brevia",
   description:
-    "Turn your PDFs into short, engaging summaries with the power of AI.",
+    "Turn your PDFs into short, engaging summaries with the power of AI. This project leverages many new technnologies including UploadThing, Neon DB, Langchain, Open AI, and Gemini AI.",
   image: "/images/brevia.jpeg",
   githubUrl: "https://github.com/garry-singh/brevia",
   liveUrl: "https://brevia.vercel.app/",

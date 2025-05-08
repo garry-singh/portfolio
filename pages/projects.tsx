@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Make 10 / Make X Game",
     description:
-      "A simple game where you make 10 by using the given numbers only once. Built with React and TypeScript, this game challenges your mathematical thinking and problem-solving skills.",
+      "A simple game where you make 10 by using the given numbers only once. This is my mathematical take on the classic Wordle game built with Next.js and TypeScript.",
     image: "/images/make-ten.jpeg",
     githubUrl: "https://github.com/garry-singh/maketen",
     liveUrl: "https://maketen.vercel.app",
@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Colour Palette Maker",
     description:
-      "Create your own colour palette by selecting up to 20 colours you like from a colour picker. Built with React and TypeScript, featuring a modern UI and intuitive color selection interface.",
+      "Create your own colour palette by selecting up to 20 colours you like from a colour picker. My first major project in React, from Colt Steele's Web Developer Bootcamp but rewritten entirely using React Hooks.",
     image: "/images/colour-palette-maker.jpeg",
     githubUrl: "https://github.com/garry-singh/colour-palette-maker",
     liveUrl: "https://garry-singh.github.io/colour-palette-maker/#/",
